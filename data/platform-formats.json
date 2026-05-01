@@ -1,0 +1,95 @@
+{
+  "youtube": {
+    "platform": "youtube",
+    "content_types": ["video_idea", "short_idea", "community_post"],
+    "limits": {
+      "title": 60,
+      "description": 5000,
+      "tags_total_chars": 500
+    },
+    "required_fields": ["title", "description", "tags", "thumbnail_concept", "cta", "target_duration_min", "hook_script_line"],
+    "optional_fields": ["chapters"],
+    "tone_rules": [
+      "Titles must be curiosity-gap or specific result format",
+      "Descriptions must be searchable and include timestamps if chapters present",
+      "Tone: educational, structured, searchable"
+    ]
+  },
+  "instagram": {
+    "platform": "instagram",
+    "content_types": ["feed_post", "carousel", "reel_idea", "story_idea"],
+    "limits": {
+      "caption_body": 2200,
+      "hashtags_max": 30
+    },
+    "required_fields": ["hook", "caption_body", "hashtags", "content_type", "cta"],
+    "optional_fields": ["slide_count", "slides", "audio_suggestion"],
+    "tone_rules": [
+      "Always end Instagram posts with a question",
+      "Hashtag count must not exceed 30",
+      "Carousels must include a slide-by-slide outline in the slides field"
+    ]
+  },
+  "x": {
+    "platform": "x",
+    "content_types": ["single_tweet", "thread"],
+    "limits": {
+      "tweet_chars": 280,
+      "thread_max_tweets": 25,
+      "hashtags_max": 2
+    },
+    "required_fields": ["hook_tweet", "hashtags", "cta_tweet"],
+    "optional_fields": ["tweet_text", "thread"],
+    "tone_rules": [
+      "Single tweet: tweet_text must be ≤280 characters",
+      "Thread: first tweet is always the hook_tweet; each subsequent tweet ≤280 chars",
+      "Max 2 hashtags total"
+    ]
+  },
+  "linkedin": {
+    "platform": "linkedin",
+    "content_types": ["article", "post", "document_post"],
+    "limits": {
+      "body": 3000,
+      "article": 125000,
+      "hashtags_max": 5
+    },
+    "required_fields": ["headline", "body", "content_type", "cta", "hashtags", "target_audience_note"],
+    "optional_fields": [],
+    "tone_rules": [
+      "Structured, insight-led, professional credibility framing",
+      "Hashtag count must not exceed 5",
+      "Tone: professional, insight-led, credibility-first"
+    ]
+  },
+  "reddit": {
+    "platform": "reddit",
+    "content_types": ["text_post", "link_post", "comment_idea"],
+    "limits": {
+      "title": 300,
+      "body": 40000
+    },
+    "required_fields": ["subreddit_suggestion", "title", "body", "post_type", "tldr", "engagement_hook"],
+    "optional_fields": ["flair_suggestion"],
+    "tone_rules": [
+      "Write as a community member — no brand voice",
+      "No promotional language",
+      "Tone: casual, community-native, zero promotional language"
+    ]
+  },
+  "facebook": {
+    "platform": "facebook",
+    "content_types": ["post", "carousel", "event_post"],
+    "limits": {
+      "caption_chars": 63206,
+      "effective_caption": 400
+    },
+    "required_fields": ["caption", "content_type", "hashtags", "cta", "best_time_note"],
+    "optional_fields": ["link_preview"],
+    "tone_rules": [
+      "Keep caption under 400 characters for optimal engagement",
+      "Community and conversational framing",
+      "Include a link preview object for link posts"
+    ]
+  }
+}

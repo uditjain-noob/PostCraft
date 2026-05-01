@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "postcraft": {
+      "command": "node",
+      "args": ["/Users/udit.jain/git/PostCraft/.claude/worktrees/gracious-mayer-5a0911/dist/server.js"],
+      "env": {
+        "ANTHROPIC_API_KEY": "your-anthropic-api-key-here",
+        "PREFAB_WEBHOOK_URL": "your-prefab-webhook-url-here"
+      }
+    }
+  }
+}

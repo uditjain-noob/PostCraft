@@ -1,0 +1,33 @@
+{
+  "_note": "Research-based default optimal posting windows. Used by build_posting_schedule (Phase 2). Times are local to account timezone.",
+  "youtube": {
+    "best_days": ["friday", "saturday", "sunday"],
+    "best_times": ["15:00", "16:00", "17:00"],
+    "max_per_week": 3
+  },
+  "instagram": {
+    "best_days": ["monday", "tuesday", "wednesday", "friday"],
+    "best_times": ["09:00", "11:00", "19:00"],
+    "max_per_week": 5
+  },
+  "x": {
+    "best_days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+    "best_times": ["08:00", "12:00", "17:00", "20:00"],
+    "max_per_week": 14
+  },
+  "linkedin": {
+    "best_days": ["tuesday", "wednesday", "thursday"],
+    "best_times": ["08:00", "10:00", "17:00"],
+    "max_per_week": 5
+  },
+  "reddit": {
+    "best_days": ["monday", "tuesday", "wednesday", "thursday"],
+    "best_times": ["09:00", "10:00", "12:00"],
+    "max_per_week": 3
+  },
+  "facebook": {
+    "best_days": ["wednesday", "thursday", "friday", "saturday"],
+    "best_times": ["09:00", "13:00", "20:00"],
+    "max_per_week": 5
+  }
+}

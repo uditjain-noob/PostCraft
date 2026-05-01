@@ -1,0 +1,32 @@
+{
+  "account_id": "postglow",
+  "brand_name": "PostGlow",
+  "tone": "warm, educational, empowering",
+  "language": "en",
+  "products": ["vitamin C serum", "hyaluronic moisturiser"],
+  "target_audience": "Women 25-40, skin-conscious, ingredient-aware",
+  "active_platforms": ["youtube", "instagram", "x", "reddit", "linkedin", "facebook"],
+  "content_pillars": ["ingredient_spotlight", "skin_tips", "product_education", "community_qa"],
+  "content_mix": { "educational": 0.7, "promotional": 0.2, "personal": 0.1 },
+  "topic_bank": ["morning routines", "ingredient science", "skincare myths", "seasonal care"],
+  "avoid_topics": ["competitor brand names", "medical claims", "before/after language"],
+  "posting_times": {
+    "instagram": ["09:00", "19:00"],
+    "linkedin": ["08:00", "17:00"],
+    "x": ["08:00", "20:00"],
+    "youtube": ["15:00"],
+    "reddit": ["10:00"],
+    "facebook": ["10:00", "20:00"]
+  },
+  "content_rules": [
+    "Always end Instagram posts with a question",
+    "Reddit posts must not use brand voice — community member tone only",
+    "YouTube titles must be curiosity-gap or specific result format",
+    "Never mention competitor brand names"
+  ],
+  "platform_overrides": {
+    "reddit": { "tone": "casual, community-native, zero promotional language" },
+    "youtube": { "tone": "educational, structured, searchable" },
+    "linkedin": { "tone": "professional, insight-led, credibility-first" }
+  }
+}
