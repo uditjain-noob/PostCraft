@@ -1,0 +1,22 @@
+[
+  {"ticker": "RELIANCE.NS", "sector": "Energy"},
+  {"ticker": "TCS.NS", "sector": "IT"},
+  {"ticker": "INFY.NS", "sector": "IT"},
+  {"ticker": "HDFCBANK.NS", "sector": "Banking"},
+  {"ticker": "ICICIBANK.NS", "sector": "Banking"},
+  {"ticker": "TATAMOTORS.NS", "sector": "Auto"},
+  {"ticker": "MARUTI.NS", "sector": "Auto"},
+  {"ticker": "AXISBANK.NS", "sector": "Banking"},
+  {"ticker": "WIPRO.NS", "sector": "IT"},
+  {"ticker": "BAJFINANCE.NS", "sector": "NBFC"},
+  {"ticker": "SBIN.NS", "sector": "Banking"},
+  {"ticker": "HINDUNILVR.NS", "sector": "FMCG"},
+  {"ticker": "NESTLEIND.NS", "sector": "FMCG"},
+  {"ticker": "TITAN.NS", "sector": "Consumer"},
+  {"ticker": "LTIM.NS", "sector": "IT"},
+  {"ticker": "HCLTECH.NS", "sector": "IT"},
+  {"ticker": "ADANIENT.NS", "sector": "Conglomerate"},
+  {"ticker": "ADANIPORTS.NS", "sector": "Infrastructure"},
+  {"ticker": "ONGC.NS", "sector": "Energy"},
+  {"ticker": "COALINDIA.NS", "sector": "Commodities"}
+]
