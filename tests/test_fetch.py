@@ -48,3 +48,25 @@ def test_fetch_actions_returns_list_or_empty():
     with patch("yfinance.Ticker", return_value=mock_ticker):
         result = fetch_actions("RELIANCE.NS")
     assert result == {}
+
+def test_fetch_ohlcv_cache_hit_restores_index():
+    """Verify that cached OHLCV data has a proper DatetimeIndex after reconstruction."""
+    from data.cache import Cache
+    import tempfile, os
+
+    # Create a real cache with real data
+    with tempfile.TemporaryDirectory() as tmp:
+        cache = Cache(str(tmp) + "/test.db", ttl_hours=1)
+
+        # Store serialized DataFrame (as fetch_ohlcv does)
+        original_df = make_ohlcv()
+        cache.set("ohlcv:TEST.NS:1mo", original_df.reset_index().to_dict(orient="records"))
+
+        # Now fetch_ohlcv should reconstruct the DataFrame correctly
+        with patch("data.fetch.get_cache", return_value=cache):
+            df = fetch_ohlcv("TEST.NS", period="1mo")
+
+        assert isinstance(df.index, pd.DatetimeIndex), "Index must be DatetimeIndex"
+        assert "Close" in df.columns
+        assert "Date" not in df.columns, "Date should be index, not a column"
+        assert len(df) == 5
