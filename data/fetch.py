@@ -8,8 +8,9 @@ def fetch_ohlcv(ticker: str, period: str = "1y") -> pd.DataFrame:
     cached = cache.get(key)
     if cached:
         df = pd.DataFrame(cached)
-        if "index" in df.columns:
-            df = df.set_index("index")
+        date_col = next((c for c in ("Date", "index") if c in df.columns), None)
+        if date_col:
+            df = df.set_index(date_col)
             df.index = pd.to_datetime(df.index)
         return df
     df = yf.download(ticker, period=period, progress=False, auto_adjust=True)
